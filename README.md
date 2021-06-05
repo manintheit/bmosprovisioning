@@ -9,7 +9,7 @@ Scripts and config files on that repo were tested on HP Server Proliant Gen9(iLO
 There is one deployment server on which running Apache HTTP server. It servers all necessary installation scripts and RHEL 7.9 binaries (os tree) in specific DocumentRoot. Bare-Metal Server is configured to pull ```startup.nsh``` from remote HTTP server and execute it. Basically, the script creates initial ramdisk with FAT16 format including a label, downloads ```vmlinuz```, ```initrd.img```, ```grub.cfg```, ```grubx64.efi``` binaries and execute  ```grubx64.efi``` which starts the grub menu including necessary kernel parameters.
 
 
-![uefi](./img/uefi.svg)
+![uefi](./uefishell/img/uefi.svg)
 
 
 ## Configuring the Embedded UEFI Shell to Read the StartupScript from the Network
@@ -29,7 +29,7 @@ Set the location (URL) where the Embedded UEFI Shell downloads the script. See C
 
 ## Sample Configuration
 
-![uefi](./img/uefishell.png)
+![uefi](./uefishell/img/uefishell.png)
 
 
 **Source:** https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c05088252
